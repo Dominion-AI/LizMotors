@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2C-PublicData</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style1.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="B2C-publicdata">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+					<h3 class="heading-2 mb-2">Public Data</h3>
+					<p class="mb-0">Public data report for our distinguished car manufacturing company, we present an insightful analysis of publicly 
+                        available data relevant to our industry and market landscape. Leveraging a wide array of sources 
+                        including government databases, industry reports, and market research, we offer valuable insights into key metrics such as market size, 
+                        consumer preferences, and emerging trends. Our report provides a comprehensive overview of the automotive sector, 
+                        shedding light on factors influencing purchasing decisions, technological advancements, and regulatory developments. 
+                    </p>       
+				</div>
+                <div class="col-lg-8 col-md-6 mt-4"> <!-- Changed from col-lg-8 col-md-6 to col-lg-4 col-md-4 -->
+                    <canvas id="myChart" height="200"></canvas>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Value 1', 'Value 2', 'Value 3'],
+                datasets: [{
+                    label: 'Values',
+                    data: [5, -3, 7],
+                    backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+                    borderColor: ['rgba(75, 192, 192, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return value + ' - ' + ['Positive', 'Negative'][index];
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

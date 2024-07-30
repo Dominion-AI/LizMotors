@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* list-style-type: none; */
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e6e0d9de;
+}
+
+
+/* Navbar Styling css Begins */
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.navbar .navbar-nav .nav-link{
+    color: #f1f1f1;
+    padding: 0 20px;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #8b8b83;
+}
+#main_nav{
+    margin-right: 5%;
+}
+.navbar .navbar-brand{
+    font-size: 34px;
+    font-weight: 700;
+    color: #f1f1f1;
+    margin-left: 5%;
+}
+.navbar .navbar-brand:hover{
+    color: #8b8b83;
+}
+.navbar .navbar-brand .logo{
+    font-size: 28px;
+    font-weight: 650;
+    color: #8b8b83;
+}
+
+@media all and (min-width: 992px) {
+.dropdown-menu li{ position: relative; 	}
+.nav-item .submenu{ 
+    display: none;
+    position: absolute;
+    left:100%; top:-7px;
+}
+.nav-item .submenu-left{ 
+    right:100%; left:auto;
+}
+.dropdown-menu > li:hover{ background-color: #3f3c3c }
+.dropdown-menu > li:hover > .submenu{ display: block; }
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+.dropdown-menu .dropdown-menu{
+    margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+}
+}	
+/* ============ small devices .end// ============ */
+
+/* Navbar hover */
+.hover{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    border-radius: 50%;
+}
+.dropdown-menu .dropdown-item + .hover{
+    display: block;
+}
+/* Navbar styling css Ends! */
+
+
+/* home page */
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/automobile4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 10;
+    left:0;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.90);
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+#home{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    margin-left: 16%;
+    margin-right: auto;
+    text-justify: distribute;
+    
+}
+#home h1, h4{
+    font-size: 40px;
+    color: #ddd3bd;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    text-align: center;
+    -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
+        transform: skew(-5deg, -5deg) rotate(5deg);
+    -webkit-transform-origin: center center;
+        transform-origin: center center;
+    text-shadow: 1px 1px #f0ededb2,
+            2px 2px #f0ededb2,
+            3px 3px #f0ededb2,
+            4px 4px #f0ededb2;
+}
+#home p{
+    color: #f5f5dc;
+    /* margin: 40px 40px 80px 40px; */
+    text-align: center;
+}
+/* Home Page Ends */
+
+/* Company's Strategy Section */
+.container .row .card{
+    position: relative;
+    }
+    
+    .container .row .card img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    }
+    
+    .overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+        
+    .overlay1:hover {
+    opacity: 1;
+    }
+    
+    .overlay1-content {
+    text-align: center;
+    padding: 5%;
+    color: white;
+    }
+    
+    .overlay-content h3 {
+    margin-bottom: 10px;
+    }
+    
+    .overlay-content p {
+    margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-inner .carousel-item > div {
+            display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    /* display 3 */
+    @media (min-width: 768px) {
+        
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+          transform: translateX(33.333%);
+        }
+        
+        .carousel-inner .carousel-item-left.active, 
+        .carousel-inner .carousel-item-prev {
+          transform: translateX(-33.333%);
+        }
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left{ 
+      transform: translateX(0);
+    }
+    /* Company Strategy Styling Ends */
+
+    /* PRD Planning Styling Section Starts*/
+    .PRD1 h1{
+        margin: 7%;
+        padding: 15px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .PRD1 a{
+        margin-top: 8%;
+    }
+
+    /* PRD Planning Styling section Ends */
+
+    /* Specs Planning Section Starts */
+    .Specs{
+        background-color: #29292846;
+    }
+    .specs1{
+        margin: 7%;
+        padding: 15px;
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase; 
+    }
+
+/* Software Page Styling Starts */
+.hd-if{
+    font-size: 58px;
+}
+.software{
+    background-color: #29292846;
+}
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 18px; */
+
+    }
+        
+    .overlay2:hover {
+    opacity: 1;
+    }
+    
+    .overlay2-content {
+    text-align: center;
+    padding: 5%;
+    color: white;
+    }
+    
+    .overlay2-content h3 {
+    margin-bottom: 10px;
+    }
+    
+    .overlay2-content p {
+    margin: 0 10px;
+    }
+    .overlay2 {
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+        opacity: 0; /* Initially hide the overlay */
+        transition: opacity 0.3s ease; /* Add transition effect for smoother appearance */
+    }
+    
+    .overlay2:hover {
+        opacity: 1; /* Show the overlay on hover */
+    }
+    /* Software page styling Ends */
+
+    /* Manufacturing Materials Styling Starts */
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .materials {
+      min-height: 100vh;
+      background-color: #29292846;
+    }
+    
+    .cards {
+      position: relative;
+    }
+    
+    .card {
+      perspective: 2200px;
+      cursor: pointer;
+      position: absolute;
+      top: 10vh;
+      right: 0;
+      width: 400px;
+      height: 600px;
+      z-index: 1;
+      transition: right 0.5s ease-in-out;
+    }
+    
+    .card img {
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: rotateY(-45deg);
+      border-radius: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .card:last-child img {
+      transform: none;
+    }
+    .production{
+        margin-top: 50%;
+    }
+
+/* Footer Styling Section Begins*/
+.footer{
+    background-color: #3f3c3c;
+
+}
+.social-icons{
+    font-size: 30px;
+    padding: 0;
+    margin-right: 50px;
+    text-decoration: none;
+} 
+.social-icons:hover .me-4{
+    font-size: 36px;
+    box-shadow: 0 0 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
+/* Footer Styling Section Ends */
+
+/* Internal Styling Section */
+.container .card{
+    margin: 5px 0;
+}
+
+/* specification styling sesction */
+.table-custom {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  .table-custom th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+
+  .table-custom td {
+    background-color: #ffffff;
+    padding: 10px;
+  }
+
+  .table-custom tr:hover {
+    background-color: #292828;
+  }
